@@ -1,0 +1,117 @@
+/* Bench.rc RESOURCE DEFINITION FILE, (c) Axel Salomon, 1990, Public Domain */
+
+#include <os2.h>
+#include "bench.h"
+
+ICON MID_MAIN  bench.ico
+
+BITMAP MID_BMP1 smile1.bmp 
+BITMAP MID_BMP2 smile2.bmp 
+
+MENU MID_MAIN  PRELOAD
+BEGIN
+ SUBMENU  "~C-Func."    , MID_C_FUNC
+ BEGIN
+  MENUITEM "~All"       , MID_C_ALL                ,MIS_TEXT
+ END
+
+ SUBMENU  "~Dos-Func."  , MID_DOS_FUNC
+ BEGIN
+  MENUITEM "~All"       , MID_DOS_ALL              ,MIS_TEXT
+ END
+
+ SUBMENU  "D~ev-Func."  , MID_DEV_FUNC
+ BEGIN
+  MENUITEM "~All"       , MID_DEV_ALL              ,MIS_TEXT
+ END
+
+ SUBMENU  "~Gpi-Func."  , MID_GPI_FUNC
+ BEGIN
+  SUBMENU "~BitBlt"     , MID_GPI_BITBLT    
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_BITBLT_ALL       ,MIS_TEXT   
+  END
+  SUBMENU "~Clipping"   , MID_GPI_CLIPPING
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_CLIPPING_ALL     ,MIS_TEXT   
+  END
+  SUBMENU "~Fonts"      , MID_GPI_FONTS
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_FONTS_ALL        ,MIS_TEXT
+   MENUITEM "~Box"      , MID_GPI_FONTS_BOX        ,MIS_TEXT
+   MENUITEM "~Chars"    , MID_GPI_FONTS_CHARS      ,MIS_TEXT
+   MENUITEM "~Direct"   , MID_GPI_FONTS_DIRECT     ,MIS_TEXT
+   MENUITEM "An~gle"    , MID_GPI_FONTS_ANGLE      ,MIS_TEXT
+   MENUITEM "~Shear"    , MID_GPI_FONTS_SHEAR      ,MIS_TEXT
+  END
+  SUBMENU "~Lines"      , MID_GPI_LINES
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_LINES_ALL        ,MIS_TEXT   
+   MENUITEM "~Boxes"    , MID_GPI_LINES_BOXES      ,MIS_TEXT
+   MENUITEM "Ar~cs"     , MID_GPI_LINES_ARCS       ,MIS_TEXT
+   MENUITEM "~Fillets"  , MID_GPI_LINES_FILLETS    ,MIS_TEXT
+   MENUITEM "~Lines"    , MID_GPI_LINES_LINES      ,MIS_TEXT
+   MENUITEM "~Splines"  , MID_GPI_LINES_SPLINES    ,MIS_TEXT
+   MENUITEM "S~tyles"   , MID_GPI_LINES_STYLES     ,MIS_TEXT
+  END
+  SUBMENU "~Marker"     , MID_GPI_MARKER
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_MARKER_ALL       ,MIS_TEXT
+   MENUITEM "~Box"      , MID_GPI_MARKER_BOX       ,MIS_TEXT
+   MENUITEM "~Poly"     , MID_GPI_MARKER_POLY      ,MIS_TEXT
+   MENUITEM "~Single"   , MID_GPI_MARKER_SINGLE    ,MIS_TEXT
+   MENUITEM "~Userdef"  , MID_GPI_MARKER_USERDEF   ,MIS_TEXT
+  END
+  SUBMENU "~Paths"      , MID_GPI_PATHS 
+  BEGIN
+   MENUITEM "~All"      , MID_GPI_PATHS_ALL        ,MIS_TEXT 
+   MENUITEM "~Endings"  , MID_GPI_PATHS_ENDS       ,MIS_TEXT
+   MENUITEM "~Fill"     , MID_GPI_PATHS_FILL       ,MIS_TEXT
+   MENUITEM "~Join"     , MID_GPI_PATHS_JOIN       ,MIS_TEXT
+   MENUITEM "~Lines"    , MID_GPI_PATHS_LINES      ,MIS_TEXT
+   MENUITEM "~Pattern"  , MID_GPI_PATHS_PATTERN    ,MIS_TEXT
+   MENUITEM "~Width"    , MID_GPI_PATHS_WIDTH      ,MIS_TEXT
+  END
+  MENUITEM "~All"       , MID_GPI_ALL              ,MIS_TEXT
+  MENUITEM "E~xtend"    , MID_GPI_EXTEND           ,MIS_TEXT
+ END
+
+ SUBMENU  "~Prf-Func."  , MID_PRF_FUNC
+ BEGIN
+  MENUITEM "~All"       , MID_PRF_ALL              ,MIS_TEXT   
+ END
+
+ SUBMENU  "~Win-Func."  , MID_WIN_FUNC
+ BEGIN
+  MENUITEM "~ALL"       , MID_WIN_ALL
+  
+  SUBMENU  "~Dialogs"   , MID_WIN_DIALOGS
+  BEGIN
+   MENUITEM "~All"      , MID_WIN_DIALOGS_ALL      ,MIS_TEXT
+   MENUITEM "~Buttons"  , MID_WIN_DIALOGS_BUTTONS  ,MIS_TEXT
+   MENUITEM "~Entrys"   , MID_WIN_DIALOGS_ENTRYS   ,MIS_TEXT
+   MENUITEM "~Listbox"  , MID_WIN_DIALOGS_LISTBOX  ,MIS_TEXT
+   MENUITEM "~Scrollbar", MID_WIN_DIALOGS_SCROLLB  ,MIS_TEXT
+   MENUITEM "S~tatics"  , MID_WIN_DIALOGS_STATICS  ,MIS_TEXT
+  END
+
+  SUBMENU  "~Menus"     , MID_WIN_MENUS
+  BEGIN
+     MENUITEM "A~ttrib" , MID_WIN_MENUS_ATTRIB     ,MIS_TEXT
+     MENUITEM "~Bitmaps", MID_WIN_MENUS_BITMAPS    ,MIS_TEXT
+     MENUITEM "~Items"  , MID_WIN_MENUS_ITEMS      ,MIS_TEXT
+     MENUITEM "~Show"   , MID_WIN_MENUS_SHOW       ,MIS_TEXT
+  END
+ END
+
+ MENUITEM "C~lear"      , CMD_CLEAR                ,MIS_TEXT
+ MENUITEM "E~xit"       , CMD_EXIT                 ,MIS_TEXT
+END
+
+ACCELTABLE MID_MAIN
+BEGIN
+ VK_F3, CMD_EXIT, VIRTUALKEY
+END
+
+rcinclude bench.dlg
+

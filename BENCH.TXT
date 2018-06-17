@@ -1,0 +1,34 @@
+Dear Reader,
+
+this programm is just starting to become a real nice tool to look at,
+if you have any question belonging the OS/2 PM. I call it Benchmark
+programm because it will check some kind of performance, but the idea
+is to write a programm which touches every part of the PM as simple
+as possible. Because this programm is only 10 hours old, only the
+a few GPI-Calls are implemented.
+
+But to get YOUR comments as soon as possible, i've uploaded this
+double plus pre alpha beta gamma version 0.00001a, you know.
+
+I'll work on this little very private every weekend. An update will
+come weekly at PCM:PROGRAMMING, CIS:ZENITH, and others.
+
+Everything include in this small packing is my very own stuff,
+released for the public domain.
+
+Hope to get lots of comments.
+
+Yours for now
+
+Axel Salomon
+Germany.
+
+PS.:
+
+This is the second version with some Dialog and Menu functions included.
+When you select "All" within one of the "Win"-Menus the following 
+problems are known :
+
+- MIA_CHECKED donït work
+- Everythings left on the screen until the test is ended
+

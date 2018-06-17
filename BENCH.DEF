@@ -1,0 +1,12 @@
+NAME bench WINDOWAPI
+
+DESCRIPTION 'Benchmark Program (c) Axel Salomon, 1990, Public Domain'
+
+PROTMODE
+
+STACKSIZE 10240
+HEAPSIZE  20480
+
+EXPORTS BenchWinProc
+EXPORTS BenchDlgProc
+
